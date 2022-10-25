@@ -1,0 +1,15 @@
+ion-slides {
+    height: 100%;
+}
+
+ion-slide {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+ion-slide img{
+    height: 300px;
+    width: 300px;
+}
