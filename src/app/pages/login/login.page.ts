@@ -17,7 +17,4 @@ export class LoginPage implements OnInit {
     this.navCtrl.navigateBack('home');
   }
 
-  onClickInscribirse(){
-    this.navCtrl.navigateBack('singup');
-  }
 }
