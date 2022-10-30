@@ -1,0 +1,35 @@
+ion-content {
+    --background: #F2561D;
+    --keyboard-offset: 0px;
+    --offset-bottom: 0px;
+    --offset-top: 0px;
+    --padding-bottom: 0px;
+    --padding-end: 0px;
+    --padding-start: 0px;
+    --padding-top: 0px;
+}
+
+.imgCenter{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+ion-img {
+    height: 200px;
+    width: 200px;
+}
+
+.centrado{
+  text-align: center;
+}
+
+ion-label {
+    text-align: center;
+}
+
+ion-button {
+    --background: #F29C6B;
+}

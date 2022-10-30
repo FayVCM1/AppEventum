@@ -14,7 +14,7 @@ export class SlidePage implements OnInit {
   }
   
   onClickEmpezar(){
-    this.navCtrl.navigateBack('login');
+    this.navCtrl.navigateBack('welcome');
   }
 
 }
