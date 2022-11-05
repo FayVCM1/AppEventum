@@ -1,9 +1,32 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>signup</ion-title>
-  </ion-toolbar>
+<ion-header>    
+  <ion-buttons slot="end">
+      <ion-back-button></ion-back-button>
+  </ion-buttons>
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+      <ion-item fill="solid">
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input type="" [clearOnEdit]="true" [clearInput]="true" ></ion-input>
+          <ion-note slot="helper">Ingrese nombre</ion-note>
+      </ion-item>
+      <br>
+      <ion-item fill="solid">
+          <ion-label position="floating">Correo</ion-label>
+          <ion-input type="email" ngModel email [clearOnEdit]="true" [clearInput]="true" value="Default value" ></ion-input>
+          <ion-note slot="helper">Ingrese correo electrónico</ion-note>
+          <ion-note slot="error">Correo electrónico inválido</ion-note>
+      </ion-item>
+      <ion-item fill="solid">
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" [clearOnEdit]="true" [clearInput]="true" ></ion-input>
+          <ion-note slot="helper">Ingrese contraseña</ion-note>
+          <ion-note slot="error">Contraseña errada</ion-note>
+      </ion-item>
+      <br><br>
+      <ion-button color="primary" (click)="onClickAgregar()">
+          Entrar
+      </ion-button>
+  </ion-list>
 </ion-content>

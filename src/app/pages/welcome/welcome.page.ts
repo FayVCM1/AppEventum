@@ -18,7 +18,7 @@ export class WelcomePage implements OnInit {
   }
 
   onClickRegistro(){
-    this.navCtrl.navigateBack('singup');
+    this.navCtrl.navigateBack('signup');
   }
 
   onClickVisitante(){
