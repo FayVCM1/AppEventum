@@ -12,9 +12,9 @@ export class SlidePage implements OnInit {
 
   ngOnInit() {
   }
-  
+
   onClickEmpezar(){
-    this.navCtrl.navigateBack('welcome');
+    this.navCtrl.navigateBack('login');
   }
 
 }

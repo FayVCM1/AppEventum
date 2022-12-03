@@ -1,10 +1,11 @@
-<ion-header>    
-    <ion-buttons slot="end">
-        <ion-back-button></ion-back-button>
-    </ion-buttons>
-</ion-header>
-
 <ion-content>
+    <div class="imgCenter">
+      <div>
+        <ion-img src="../../../assets/logos/NUEVO ESCUDO UNIMAGDALENA 01.png" class="ion-align-self-end">
+        </ion-img>
+      </div>   
+    </div>
+
     <ion-list>
         <ion-item fill="solid">
             <ion-label position="floating">Correo</ion-label>
@@ -15,13 +16,26 @@
         <br>
         <ion-item fill="solid">
             <ion-label position="floating">Contraseña</ion-label>
-            <ion-input type="password" [clearOnEdit]="true" [clearInput]="true" value="Default value" ></ion-input>
+            <ion-input type="password" [clearOnEdit]="true" [clearInput]="true" ></ion-input>
             <ion-note slot="helper">Ingrese contraseña</ion-note>
             <ion-note slot="error">Contraseña errada</ion-note>
         </ion-item>
         <br><br>
-        <ion-button color="primary" (click)="onClickEntrar()">
+        <ion-button color="success" (click)="onClickEntrar()">
             Entrar
         </ion-button>
     </ion-list>
 </ion-content>
+
+<ion-footer> 
+    <ion-toolbar>
+        <ion-button color="success"  slot="start" (click)="onClickRegistro()">
+          <ion-icon slot="start" name="person-add-outline"></ion-icon>
+          Registro
+        </ion-button>
+        <ion-button color="success"  slot="end"  (click)="onClickVisitante()">
+          <ion-icon slot="start" name="people-outline"></ion-icon>
+          Visitante
+        </ion-button>
+    </ion-toolbar>
+</ion-footer>  

@@ -17,4 +17,12 @@ export class LoginPage implements OnInit {
     this.navCtrl.navigateBack('home');
   }
 
+  onClickRegistro(){
+    this.navCtrl.navigateBack('signup');
+  }
+
+  onClickVisitante(){
+    this.navCtrl.navigateBack('home');
+  }
+
 }
