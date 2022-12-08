@@ -13,8 +13,8 @@ export class SignupPage implements OnInit {
   ngOnInit() {
   }
 
-  onClickAgregar(){
-    this.navCtrl.navigateBack('home');
+  onClickRegistrar(){
+    this.navCtrl.navigateBack('login');
   }
 
 }
