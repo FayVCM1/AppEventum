@@ -6,26 +6,72 @@
 
 <ion-content>
     <ion-list>
+        <ion-label>Formulario de registro</ion-label>
+        <br>
         <ion-item fill="solid">
-            <ion-label position="floating">Nombre</ion-label>
+            <ion-label position="floating">Nombre completo</ion-label>
             <ion-input type="" [clearOnEdit]="true" [clearInput]="true" ></ion-input>
-            <ion-note slot="helper">Ingrese nombre</ion-note>
+            <ion-note slot="helper">Ingrese nombres y apellidos</ion-note>
         </ion-item>
         <br>
         <ion-item fill="solid">
             <ion-label position="floating">Correo</ion-label>
             <ion-input type="email" ngModel email [clearOnEdit]="true" [clearInput]="true" value="Default value" ></ion-input>
             <ion-note slot="helper">Ingrese correo electrónico</ion-note>
-            <ion-note slot="error">Correo electrónico inválido</ion-note>
+            <ion-note slot="error">Correo electrónico invalido</ion-note>
         </ion-item>
         <br>
         <ion-item fill="solid">
             <ion-label position="floating">Contraseña</ion-label>
             <ion-input type="password" [clearOnEdit]="true" [clearInput]="true" ></ion-input>
             <ion-note slot="helper">Ingrese contraseña</ion-note>
-            <ion-note slot="error">Contraseña errada</ion-note>
+            <ion-note slot="error">Debe contener números y letras</ion-note>
         </ion-item>
         <br>
+        <ion-item fill="solid">
+            <ion-label position="floating">Edad</ion-label>
+            <ion-input type="" [clearOnEdit]="true" [clearInput]="true" ></ion-input>
+            <ion-note slot="helper">Ingrese edad</ion-note>
+        </ion-item>
+        <br>
+        <ion-item fill="solid">
+            <ion-label position="floating">País</ion-label>
+            <ion-input type="" [clearOnEdit]="true" [clearInput]="true" ></ion-input>
+            <ion-note slot="helper">Ingrese país</ion-note>
+        </ion-item>
+        <br>
+        <ion-item fill="solid">
+            <ion-label position="floating">Ciudad</ion-label>
+            <ion-input type="" [clearOnEdit]="true" [clearInput]="true" ></ion-input>
+            <ion-note slot="helper">Ingrese ciudad</ion-note>
+        </ion-item>
+        <br>
+        <ion-item fill="solid">
+            <ion-label position="floating">Teléfono</ion-label>
+            <ion-input type="" [clearOnEdit]="true" [clearInput]="true" ></ion-input>
+            <ion-note slot="helper">Ingrese número de teléfono</ion-note>
+        </ion-item>
+        <br>
+        <ion-radio-group [allowEmptySelection]="true" value="turtles" value="custom-checked">
+            <ion-label>Tipo de usuario</ion-label>
+            <ion-item>
+                <ion-label>Estudiante</ion-label>
+                <ion-radio value="custom" slot="end" value="estudiantes"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Docente</ion-label>
+                <ion-radio slot="end" value="docentes"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Profesional</ion-label>
+                <ion-radio slot="end" value="profesionales"></ion-radio>
+            </ion-item>
+            <ion-item>
+                <ion-label>Otro</ion-label>
+                <ion-radio slot="end" value="otros"></ion-radio>
+            </ion-item>
+        </ion-radio-group>
+          <br>
         <ion-button color="success" (click)="onClickRegistrar()">
             Registrar
         </ion-button>
