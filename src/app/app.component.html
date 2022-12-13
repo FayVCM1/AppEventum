@@ -5,12 +5,37 @@
         <ion-title>Hola</ion-title>
       </ion-toolbar>
     </ion-header>
+
     <ion-content class="ion-padding">
       <ion-list>
         <ion-menu-toggle>
-          <ion-item routerlink="/perfil">
-            <ion-icon slot="start" name="add"></ion-icon>
+          <ion-item [routerLink]="['/user']">
+            <ion-icon name="person-circle-outline"></ion-icon>
             <ion-label>Perfil</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>        
+          <ion-item [routerLink]="['/favorite']">
+            <ion-icon name="bookmark-outline"></ion-icon>
+            <ion-label>Favoritos</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>        
+          <ion-item [routerLink]="['/filter']">
+            <ion-icon name="list-outline"></ion-icon>
+            <ion-label>Filtros</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/create']">
+            <ion-icon name="power-outline"></ion-icon>
+            <ion-label>Crear publicación</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/login']">
+            <ion-icon name="power-outline"></ion-icon>
+            <ion-label>Cerrar sessión</ion-label>
           </ion-item>
         </ion-menu-toggle>
       </ion-list>
