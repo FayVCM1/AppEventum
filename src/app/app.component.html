@@ -1,3 +1,20 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu menuId="menu-home" contentId="menuContenido">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Hola</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item routerlink="/perfil">
+            <ion-icon slot="start" name="add"></ion-icon>
+            <ion-label>Perfil</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="menuContenido"></ion-router-outlet>
 </ion-app>

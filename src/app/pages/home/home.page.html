@@ -1,45 +1,42 @@
-<ion-menu contentId="main-content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Menu Content</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">This is the menu content.</ion-content>
-</ion-menu>
 
 <ion-header>
-    <ion-toolbar>
-    <ion-buttons slot="start">
-        <ion-menu-button>
-            <ion-icon name="menu-outline"></ion-icon>
-        </ion-menu-button>
-    </ion-buttons>
+  <ion-toolbar>
     <ion-title>EventUM</ion-title>
-    </ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="menu-home"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar animated="true"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card>
-    <img id="imagenCard" src="assets/fotos/EncuentroGraduados.jpg" />
-    <ion-card-header>
-      <ion-card-title>Encuentro de egresados</ion-card-title>
-      <ion-card-subtitle>Centro de Egresados Unimagdalena, Vicerrectoría de Extensión y Proyección Social</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Graduado UNIMAGDALENA tenemos una invitación para ti 😎. Disfruta este viernes, 16 de diciembre, de una jornada cultural en nuestro Claustro San Juan Nepomuceno.
-    </ion-card-content>
-  </ion-card>
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let item of items; let index">
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+        <ion-card-header>
+          <ion-card-title>{{ item }}</ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+        <ion-button fill="clear">Asistir</ion-button>
+        <ion-button fill="clear">
+          <ion-icon name="bookmark-outline"></ion-icon>
+        </ion-button>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+  <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
 
-    <ion-list>
-      <ion-item *ngFor="let item of items; let index">
-        <ion-avatar slot="start">
-          <img [src]="'https://picsum.photos/80/80?random=' + index" alt="avatar" />
-        </ion-avatar>
-        <ion-label>{{ item }}</ion-label>
-      </ion-item>
-    </ion-list>
-    <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
-      <ion-infinite-scroll-content></ion-infinite-scroll-content>
-    </ion-infinite-scroll>
- </ion-content>
+ <ion-footer>
+  <ion-toolbar>
+    <ion-searchbar animated="true"></ion-searchbar>
+  </ion-toolbar>
+ </ion-footer>
